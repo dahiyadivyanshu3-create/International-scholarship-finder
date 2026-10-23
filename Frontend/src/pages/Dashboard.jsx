@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import scholarships from "../data/scholarships";
+import Flag from "../components/Flag";
 
 const user = { name: "Divyanshu" }; 
 
@@ -50,8 +51,7 @@ export default function Dashboard() {
       <div className="mt-3 grid gap-4 md:grid-cols-3">
         {scholarships.slice(0, 3).map((s) => (
           <div key={s.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-            <img src={`https://flagcdn.com/w80/${s.code}.png`} alt={s.country}
-              className="h-8 w-12 rounded object-cover shadow-sm" />
+            <Flag code={s.code} country={s.country} className="h-8 w-12 rounded shadow-sm" />
             <h3 className="mt-3 text-sm font-semibold text-slate-900">{s.name}</h3>
             <p className="text-xs text-slate-500">{s.country} · <span className="text-green-600">{s.funding}</span></p>
             <p className="mt-1 text-xs text-red-500">Deadline: {s.deadline}</p>

@@ -1,13 +1,10 @@
 
 import { Link } from "react-router-dom";
+import Flag from "./Flag";
 export default function ScholarshipCard({ s }) {
   return (
     <div className="flex items-center gap-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-      <img
-  src={`https://flagcdn.com/w80/${s.code}.png`}
-  alt={s.country}
-  className="h-10 w-14 rounded object-cover shadow-sm"
-/>
+     <Flag code={s.code} country={s.country} className="h-10 w-14 rounded shadow-sm" />
       <div className="flex-1">
         <h3 className="font-semibold text-slate-900">{s.name}</h3>
         <p className="text-sm text-slate-500">

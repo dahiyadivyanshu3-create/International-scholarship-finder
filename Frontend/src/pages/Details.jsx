@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import scholarships from "../data/scholarships";
+import Flag from "../components/Flag";
 
 export default function Details() {
   const { id } = useParams();
@@ -13,7 +14,7 @@ export default function Details() {
 
       <div className="mt-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
         <div className="flex items-center gap-4">
-          <img src={`https://flagcdn.com/w80/${s.code}.png`} alt={s.country} className="h-10 w-14 rounded object-cover shadow-sm" />
+         <Flag code={s.code} country={s.country} className="h-10 w-14 rounded shadow-sm" />
           <div>
             <h1 className="text-xl font-bold text-slate-900">{s.name}</h1>
             <p className="text-sm text-slate-500">

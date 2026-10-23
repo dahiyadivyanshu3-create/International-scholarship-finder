@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
+import Applications from "./pages/Applications";
 
 function PublicLayout() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
       </Route>
 
       <Route element={<DashboardLayout />}>
+      <Route path="/applications" element={<Applications />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<ComingSoon name="Profile" />} />
